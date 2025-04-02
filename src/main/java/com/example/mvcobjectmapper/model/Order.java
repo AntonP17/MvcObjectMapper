@@ -2,6 +2,7 @@ package com.example.mvcobjectmapper.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Order {
     private Long id;
 
     @Temporal(TemporalType.DATE)
+    @NotNull(message = "Order date is mandatory")
     @Column(name = "order_date")
     private Date orderDate;
 

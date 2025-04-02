@@ -3,6 +3,7 @@ package com.example.mvcobjectmapper.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "product")
@@ -12,7 +13,8 @@ public class Product {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @NotNull(message = "cant null")
+    @NotNull(message = "Name is mandatory")
+    @Size(min = 1, max = 100, message = "Name must be between 1 and 100 characters")
     @Column(name = "name")
     private String name;
 
