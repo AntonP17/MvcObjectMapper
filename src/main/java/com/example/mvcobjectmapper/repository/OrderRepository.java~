@@ -1,0 +1,4 @@
+package com.example.mvcobjectmapper.repository;
+
+public interface OrderRepository extends org.springframework.data.jpa.repository.JpaRepository<com.example.mvcobjectmapper.model.Order, java.lang.Long> {
+}
